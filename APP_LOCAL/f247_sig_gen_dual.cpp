@@ -1,0 +1,63 @@
+#ifndef _F247_SIG_GEN_DUAL_CPP_
+#define _F247_SIG_GEN_DUAL_CPP_
+
+
+
+#include "f247_sig_periodic.cpp"
+
+
+
+#define F247_PREV     F247_SIG_PERIODIC
+#define F247_THIS     F247_SIG_GEN_DUAL
+
+
+
+class F247_THIS : public F247_PREV
+    {
+  public:
+    F247_THIS(const char* id_str_=""); //must be implemented
+    virtual ~F247_THIS();              //must be implemented
+  public:
+    virtual const char* TypeName(void)         {return xstr(F247_THIS);}  //must be copied
+  public:
+    F247_SIG_OUTPUT valL;
+    F247_SIG_OUTPUT valR;
+    F247_SIG_INPUT peakL;
+    F247_SIG_INPUT peakR;
+    };
+
+
+
+#if __INCLUDE_LEVEL__ == 0
+
+
+
+F247_THIS::F247_THIS(const char* id_str_) : F247_PREV(id_str_), valL(), valR(), peakL(), peakR()
+    {
+    Log_Cons();
+    valL.AppendMe(&outputs);
+    valR.AppendMe(&outputs);
+    peakL.AppendMe(&inputs);
+    peakR.AppendMe(&inputs);
+    }
+
+
+
+F247_THIS::~F247_THIS()
+    {
+    Log_Dest();
+    }
+
+
+
+#endif // if __INCLUDE_LEVEL__ == 0
+
+
+
+#undef F247_PREV
+#undef F247_THIS
+
+
+
+#endif //_F247_SIG_GEN_DUAL_CPP_
+

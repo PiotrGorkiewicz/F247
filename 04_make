@@ -1,0 +1,5 @@
+#!/bin/bash
+cd build
+make 1>mk1 2>mk2
+cd ..
+

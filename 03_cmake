@@ -1,0 +1,11 @@
+#!/bin/bash
+cd build
+make clean
+cd ..
+rm -rf build
+mkdir build
+cd build
+#cmake -DCMAKE_TOOLCHAIN_FILE=./xmega-toolchain.cmake .. 1>cf1 2>cf2
+cmake .. 1>cf1 2>cf2
+cd ..
+

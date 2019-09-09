@@ -1,0 +1,25 @@
+SIMPLE_TYPES
+AUDIO   PARSE01         SCALAR_TIME
+        ARGS01
+
+
+
+
+
+
+
+NAMED
+REPORTABLE
+RUNNABLE                   EVENT                                                                            BRANCHED
+ALLOCATABLE                SDL2_EVENT
+SIG                                                              AUDIO_2x16_CB_01                                               DB_SQLITE            GUI_SDL2_ENVIRONMENT
+SIG_SAMPLED                                                      AUDIO_ALSA   AUDIO_PORTAUDIO
+SIG_PERIODIC
+SIG_GEN_DUAL
+SIG_GEN_DUAL_COS
+
+
+
+
+
+
