@@ -1,0 +1,4 @@
+f247_log_count.cpp:11:long F247_log_count_points[F247_LOG_COUNT_POINTS];
+f247_log_count.cpp:18:        F247_log_count_points[p]++;
+f247_log_count.cpp:24:            if (0!=F247_log_count_points[i])
+f247_log_count.cpp:25:                printf("F247_log_count_points[%d]=%ld\n",i,F247_log_count_points[i]);

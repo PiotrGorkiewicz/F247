@@ -155,7 +155,7 @@ F247_ACT_STATUS F247_THIS::Free(void* arg)
         case 0:
             {
 	    sqlite3_close(db);
-            to_allocate--;
+            to_allocate++;
             printf("Sqlite (#05): \n" );fflush(stdout);
             return F247_ACT_STATUS_Done;
             // no break!
